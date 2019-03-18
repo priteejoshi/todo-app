@@ -133,6 +133,7 @@ ticketRepository.save(ticket);
     public List<Ticket>  GetLastTicket( @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") @RequestParam("LastFetchedDate") String LastFetchedDate)  {
 		List<Ticket> tickets = (List<Ticket>) ticketRepository.getLastFetchedTickets(LastFetchedDate);
 
+	    System.out.println("HIIIIIIIIIIII")
 		return tickets;
 	}
 	
